@@ -1,23 +1,13 @@
 <!DOCTYPE html>
 <html ng-app="ResponsiveTest">
 <head>
-    <!--
-    /**
-     * ResponsiveTest
-     *
-     * @link        https://github.com/nghuuphuoc/responsivetest
-     * @author      Nguyen Huu Phuoc <huuphuoc.me>
-     * @copyright   (c) 2013 Nguyen Huu Phuoc
-     */
-    -->
     <meta charset="utf-8">
-    <title>Testing responsive web design in various resolutions | ResponsiveTest</title>
+    <title>Responsive (RWD) 響應式網站版面測試 | SIMULAR 夏木樂網站工具</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Testing responsive web design in various resolutions">
-    <meta name="keywords" content="test responsive web design, responsive web design, responsive design testing, responsive web design testing, Responsive Web Design Tools">
-    <meta name="author" content="Nguyen Huu Phuoc (@nghuuphuoc)">
-    <meta name="copyright" content="APL Solutions">
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <meta name="description" content="本站可以協助您測試網站在各種不同裝置螢幕大小上的呈現效果，讓您方便進行 Responsive Web Design (RWD) 開發。">
+    <meta name="keywords" content="響應式網站設計, test responsive web design, responsive web design, responsive design testing, responsive web design testing, Responsive Web Design Tools">
+    <meta name="author" content="Simular">
+    <link rel="icon" href="http://simular.co/templates/tz_jollyany_joomla/favicon.ico" type="image/x-icon" />
 
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" media="screen">
@@ -51,7 +41,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/"><img src="dist/img/logo.png" alt="Responsive Test" /></a>
+                <a class="navbar-brand" href="/"><img width="105" src="dist/img/simular-logo.png" alt="Responsive (RWD) 響應式網站版面測試" /></a>
             </div>
 
             <div class="nav-collapse rt-navbar-collapse rt-navbar">
@@ -60,7 +50,8 @@
                     <input type="text" class="form-control" ng-model="w" name="w" style="width: 60px;" placeholder="w" />
                     <span style="color: #777;">x</span>
                     <input type="text" class="form-control" ng-model="h" name="h" style="width: 60px;" placeholder="h" />
-                    <button type="button" class="btn btn-success" ng-click="rotate()"><i class="fa fa-retweet"></i> Rotate</button>
+                    <button type="button" class="btn btn-success" ng-click="rotate()"><i class="fa fa-retweet"></i> 翻轉</button>
+	                <a class="btn btn-warning" href="http://simular.co">夏木樂網頁設計 <i class="fa fa-share"></i></a>
                 </form>
 
                 <ul class="nav navbar-nav navbar-right">
@@ -91,42 +82,33 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title">About Responsive Test</h4>
+                    <h4 class="modal-title">Responsive (RWD) 響應式網站版面測試</h4>
                 </div>
                 <div class="modal-body text-center">
-                    <p>
-                        v1.2.2<br />
-                        Created by <a href="http://twitter.com/nghuuphuoc">Nguyen Huu Phuoc</a><br />
-                        &copy; 2013 <a href="http://apl.vn">APL Solutions</a>
-                    </p>
+	                <p>
+		                本工具由 <a href="http://simular.co" target="_blank">夏木樂網頁設計</a> 製作並維護。
+	                </p>
+
+	                <p>
+		                此工具由開源的 Responsive Test 工具修改而成，<br>感謝 <a href="http://twitter.com/nghuuphuoc">Nguyen Huu Phuoc</a>，感謝 Open Source。
+	                </p>
+
+	                <p>
+		                &copy; 2015 <a href="http://megamount.tw">百岳國際股份有限公司</a>
+	                </p>
                     <p>
                         <small>
                             Powered by <a href="http://getbootstrap.com">Bootstrap 3</a>, <a href="http://angularjs.org">AngularJs</a>, <a href="http://jquery.com">jQuery</a> and <a href="http://jqueryui.com">jQuery UI</a><br />
                             Icons are provided by <a href="http://fontawesome.io">Font Awesome</a>
                         </small>
                     </p>
-
-                    <iframe src="http://ghbtns.com/github-btn.html?user=nghuuphuoc&repo=responsivetest&type=fork" allowtransparency="true" frameborder="0" scrolling="0" width="53" height="20"></iframe>
-                    <iframe src="http://ghbtns.com/github-btn.html?user=nghuuphuoc&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="152" height="20"></iframe>
                 </div>
             </div>
         </div>
     </div>
     <!-- :about -->
 
-    <!-- fork-me -->
-    <a href="https://github.com/nghuuphuoc/responsivetest"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 9999;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork ResponsiveTest on GitHub"></a>
-
 <script type="text/javascript">
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-4752571-14']);
-_gaq.push(['_trackPageview']);
-(function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
-
 $(document).ready(function() {
     var rulerIndex = $('.rt-ruler').css('z-index');
     $('#iframe').on('mouseover', function() {
